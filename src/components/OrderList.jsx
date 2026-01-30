@@ -59,7 +59,7 @@ const OrderList = () => {
         setFilters(prev => ({
             ...prev,
             [key]: value,
-            page: 1
+            ...(key !=='page' && { page: 1 })
         }));
     };
 
